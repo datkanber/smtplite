@@ -135,7 +135,7 @@ class SmtpLiteServer {
             this.handleRequest(req, res);
         });
 
-        const PORT = 8080;
+        const PORT = 9090;
         server.listen(PORT, () => {
             console.log(`SmtpLite server running on port ${PORT}`);
             logger.serverStarted(PORT);
