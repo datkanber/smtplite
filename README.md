@@ -77,7 +77,7 @@ Copy `config/config.example.json` to `config/config.json` and edit with your set
 Send emails via GET request:
 
 ```
-GET http://localhost:8080/send?key=abc123&to=test@mail.com&subject=Hello&text=Engine+Failure
+GET http://localhost:9090/send?key=abc123&to=test@mail.com&subject=Hello&text=Engine+Failure
 ```
 
 ### Parameters
@@ -103,6 +103,49 @@ Error (400/403/500):
   "error": "Error description"
 }
 ```
+
+## Direct Usage via require() (Without HTTP API)
+
+SmtpLite can also be used as a Node.js module without running the HTTP server. This is useful for sending emails directly from scripts, CLI tools, or background jobs.
+
+### Installation
+```bash
+npm install smtplite
+```
+
+### Example
+```javascript
+const SmtpClient = require('smtplite/smtp/smtpClient');
+
+const smtpConfig = {
+  host: 'smtp.gmail.com',
+  port: 587,
+  username: 'your-email@gmail.com',
+  password: 'your-app-password', // Use Gmail App Password if 2FA is enabled
+  from: 'your-email@gmail.com',
+  secure: false,
+  timeout: 10000
+};
+
+const client = new SmtpClient(smtpConfig);
+
+client.sendEmail({
+  to: 'recipient@example.com',
+  subject: 'Hello from direct SmtpClient',
+  text: 'This is a test email using direct class access.'
+})
+.then(() => {
+  console.log('Email sent successfully');
+})
+.catch(err => {
+  console.error('Failed to send email:', err.message);
+});
+```
+
+### When to Use
+- When you don't want to expose a web server or REST API
+- When running email operations from scheduled tasks, CLI tools, or automation scripts
+- When using SmtpLite on minimal systems like Raspberry Pi, where low resource usage is critical
 
 ## Systemd Service
 

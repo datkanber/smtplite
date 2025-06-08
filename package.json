@@ -1,0 +1,17 @@
+{
+    "name": "smtplite",
+    "version": "1.0.0",
+    "description": "Minimal, zero-dependency SMTP email API written in pure Node.js for lightweight servers and Raspberry Pi",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "author": "Burak Kanber",
+    "license": "MIT",
+    "keywords": ["smtp", "email", "raspberry-pi", "api", "zero-dependency"],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/datkanber/smtplite"
+    }
+  }
+  
