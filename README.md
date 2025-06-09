@@ -14,7 +14,7 @@ A lightweight, pure Node.js mail delivery system with no external dependencies. 
 - Minimal resource usage
 - **NEW**: TLS/SSL support for secure SMTP (ports 587 and 465)
 - **NEW**: Connection timeout protection
-- **NEW**: Structured JSON logging
+- **NEW**: Structured JSON logging.
 
 ## Setup
 
