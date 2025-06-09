@@ -203,6 +203,8 @@ All events are logged to `logs/mail.log` in structured JSON format:
 - API key authentication
 - Structured error logging for security monitoring
 
+⚠️ This library is intended for educational and internal use only. Use it responsibly. Mass email sending without permission may be illegal in your jurisdiction.
+
 ## License
 
 MIT License
