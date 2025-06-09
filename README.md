@@ -1,3 +1,5 @@
+![SmtpLite](./assets/smtplite.png)
+
 # SmtpLite
 
 A lightweight, pure Node.js mail delivery system with no external dependencies. Perfect for Raspberry Pi and minimal environments.
