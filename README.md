@@ -205,6 +205,25 @@ All events are logged to `logs/mail.log` in structured JSON format:
 
 ⚠️ This library is intended for educational and internal use only. Use it responsibly. Mass email sending without permission may be illegal in your jurisdiction.
 
+## ⚠️ Legal Disclaimer
+
+This project is provided for educational and internal-use purposes only.
+
+- Do **not** use this library for mass mailing, unsolicited messages (SPAM), or impersonation (email spoofing).
+- The author assumes **no responsibility** for any misuse, data breach, or damage caused by this software.
+- Make sure to comply with your local regulations (such as GDPR, KVKK, CAN-SPAM Act, etc.) when sending emails through SMTP.
+
+Use at your own risk.
+
+##  Deliverability Note
+
+To improve deliverability and prevent your emails from going to the spam folder:
+
+- Configure **SPF**, **DKIM**, and **DMARC** records for your domain.
+- Use a verified domain with your SMTP provider.
+- Avoid free SMTP servers (e.g., Gmail) for production usage.
+
+
 ## License
 
 MIT License
